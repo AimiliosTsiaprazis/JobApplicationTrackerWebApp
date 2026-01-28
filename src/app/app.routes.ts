@@ -1,5 +1,4 @@
 import { RouterModule ,Routes } from '@angular/router';
-import { NgModule } from '@angular/core';
 import { AddApplicationComponent } from './components/add-application/add-application.component';
 import { ListApplicationsComponent } from './components/list-applications/list-applications.component';
 
@@ -9,10 +8,3 @@ export const routes: Routes = [
     { path: 'applications', component: ListApplicationsComponent },
     { path: 'add', component: AddApplicationComponent },
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-
-export class AppRoutes { }
