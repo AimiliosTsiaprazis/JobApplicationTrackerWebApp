@@ -1,22 +1,23 @@
-import { Injectable } from "@angular/core";
-import { Application } from "../Models/application.model";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Application } from '../models/application.model';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
+export class ApplicationService {
+  private apiUrl = 'http://localhost:3306/applications';
 
-export class ApplicationService{
-    private applications : Application[] = [];
-    private currentId = 1;
-    
-    constructor(){}
+  constructor(private http: HttpClient) {}
 
-    getApplications(): Application[] {
-        return this.applications;
-    }
+  getApplications(): Observable<Application[]> {
+    return this.http.get<Application[]>(this.apiUrl);
+  }
 
-    addApplication(app: Omit<Application, 'id'>): void{
-        const newApp: Application = { id: this.currentId++, ...app };
-        this.applications.push(newApp);
-    }
+  addApplication(
+    app: Omit<Application, 'id'>
+  ): Observable<Application> {
+    return this.http.post<Application>(this.apiUrl, app);
+  }
 }
