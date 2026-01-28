@@ -4,6 +4,6 @@ export interface Application{
     id: number;
     company: string;
     position: string;
-    applicationDate: Date;
+    applicationDate: string;
     status: ApplicationStatus;
 }
