@@ -4,7 +4,7 @@ import { ListApplicationsComponent } from './components/list-applications/list-a
 
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'applications', pathMatch: 'full' },
-    { path: 'applications', component: ListApplicationsComponent },
+    { path: '', redirectTo: 'list', pathMatch: 'full' },
+    { path: 'list', component: ListApplicationsComponent },
     { path: 'add', component: AddApplicationComponent },
 ];

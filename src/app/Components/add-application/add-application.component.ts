@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ApplicationService } from '../../Services/application.service';
+import { ApplicationService } from '../../services/application.service';
 import { ApplicationStatus } from '../../models/application.model';
 
 @Component({

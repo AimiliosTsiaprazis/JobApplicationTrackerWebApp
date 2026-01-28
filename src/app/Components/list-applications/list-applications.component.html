@@ -1,0 +1,33 @@
+<div class="page">
+  <div class="card wide">
+    <h2>My Applications</h2>
+
+    <table *ngIf="applications.length; else emptyState">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Position</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let app of applications">
+          <td>{{ app.company }}</td>
+          <td>{{ app.position }}</td>
+          <td>
+            <span class="status" [ngClass]="app.status.toLowerCase()">
+              {{ app.status }}
+            </span>
+          </td>
+          <td>{{ app.applicationDate | date:'mediumDate' }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ng-template #emptyState>
+      <p class="empty">No applications yet. Start applying!!!</p>
+    </ng-template>
+  </div>
+</div>
