@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApplicationService } from '../../services/application.service';
-import { ApplicationStatus } from '../../models/application.model';
+import { Application, ApplicationStatus } from '../../models/application.model';
 
 @Component({
   selector: 'app-add-application',
@@ -30,14 +30,22 @@ export class AddApplicationComponent {
     private router: Router
   ) {}
 
-  submit() {
-    this.appService.addApplication({
+  saveApplication() {
+    const newApp: Application = {
+      id: 0,
       company: this.company,
       position: this.position,
       status: this.status,
       applicationDate: this.applicationDate
-    }).subscribe(() => {
-      this.router.navigate(['/applications']);
+    };
+
+    this.appService.addApplication(newApp).subscribe({
+      next: (res) => {
+        console.log('Application saved', res);
+      },
+      error: (err) => {
+        console.error('Error saving application', err);
+      }
     });
   }
 }

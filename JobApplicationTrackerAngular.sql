@@ -7,5 +7,5 @@ CREATE TABLE applications (
   company VARCHAR(255) NOT NULL,
   position VARCHAR(255) NOT NULL,
   applicationDate DATE,
-  status ENUM('Applied','Rejected','Offer','Accepted','Interview') NOT NULL
+  status VARCHAR(255)
 );
