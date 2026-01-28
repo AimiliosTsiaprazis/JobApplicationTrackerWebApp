@@ -1,0 +1,52 @@
+<div class="page">
+  <div class="card">
+    <h2>Add Job Application</h2>
+
+    <form (ngSubmit)="submit()">
+      <div class="form-group">
+        <label>Company</label>
+        <input
+          type="text"
+          placeholder="e.g. Microsoft"
+          [(ngModel)]="company"
+          name="company"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Position</label>
+        <input
+          type="text"
+          placeholder="e.g. Software Developer"
+          [(ngModel)]="position"
+          name="position"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Status</label>
+        <select [(ngModel)]="status" name="status">
+          <option *ngFor="let s of statuses" [value]="s">
+            {{ s }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Application Date</label>
+        <input
+          type="date"
+          [(ngModel)]="applicationDate"
+          name="applicationDate"
+          required
+        />
+      </div>
+
+      <button type="submit" class="btn-primary">
+        Save Application
+      </button>
+    </form>
+  </div>
+</div>
