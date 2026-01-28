@@ -42,6 +42,7 @@ export class AddApplicationComponent {
     this.appService.addApplication(newApp).subscribe({
       next: (res) => {
         console.log('Application saved', res);
+        this.router.navigate(['/list']);
       },
       error: (err) => {
         console.error('Error saving application', err);

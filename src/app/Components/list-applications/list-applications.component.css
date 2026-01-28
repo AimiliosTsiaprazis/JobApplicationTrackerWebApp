@@ -1,86 +1,76 @@
+/* Base page styling */
 .page {
-  min-height: calc(100vh - 60px);
-  padding: 2rem;
-  background: #f4f6f8;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  min-height: 100vh;
 }
 
+/* Card styling */
 .card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
   max-width: 900px;
   margin: 0 auto;
-  background: #ffffff;
-  padding: 1.5rem 2rem;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-
-  h2 {
-    margin-bottom: 1.5rem;
-    color: #1f2937;
-  }
-
-  &.wide {
-    overflow-x: auto;
-  }
 }
 
+/* Heading */
+.card h2 {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Table styling */
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
-
-  thead {
-    background: #f9fafb;
-  }
-
-  th,
-  td {
-    padding: 0.75rem;
-    text-align: left;
-    border-bottom: 1px solid #e5e7eb;
-  }
-
-  th {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    color: #6b7280;
-  }
 }
 
+thead th {
+  background-color: #f0f0f0;
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+tbody td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  color: #333;
+}
+
+/* Status badges */
 .status {
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: capitalize;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  display: inline-block;
 }
 
-/* Status colors */
-.applied {
-  background: #dbeafe;
-  color: #1e40af;
+.status.applied {
+  color: #000;
 }
 
-.interview {
-  background: #fef3c7;
-  color: #92400e;
+.status.rejected {
+  color: #d9534f;
 }
 
-.offer {
-  background: #dcfce7;
-  color: #166534;
+.status.interview {
+  color: #007bff;
 }
 
-.accepted {
-  background: #bbf7d0;
-  color: #14532d;
+.status.offer {
+  color: #28a745;
 }
 
-.rejected {
-  background: #fee2e2;
-  color: #991b1b;
-}
-
+/* No data message */
 .empty {
   text-align: center;
-  padding: 2rem;
-  color: #6b7280;
+  color: #777;
+  font-style: italic;
+  margin-top: 20px;
 }
