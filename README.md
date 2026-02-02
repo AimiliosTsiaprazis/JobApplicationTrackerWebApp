@@ -58,13 +58,18 @@ database: 'jobapplicationtrackerangular'
 ### 2: Backend Setup
 
 Install dependencies and start the backend server:
-npm install
-cd backend
-node server.js
+-npm install
+-cd backend
+-node server.js
 
 The backend (server.js) must be started first.
+live the cmd for the server.js opened
 
 ### 3: Frontend Setup
 
+open a new terminal in your project path
 Navigate to the Angular project folder and run:
 ng serve
+
+### 4: If errors appear
+make sure all the folders are lowercase at your system: For Example for 'Models' folder should be 'models'
