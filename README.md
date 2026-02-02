@@ -59,6 +59,7 @@ database: 'jobapplicationtrackerangular'
 
 Install dependencies and start the backend server:
 npm install
+cd backend
 node server.js
 
 The backend (server.js) must be started first.
