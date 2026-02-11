@@ -75,9 +75,10 @@ ng serve
 make sure all the folders are lowercase at your system: For Example for 'Models' folder should be 'models'
 
 ### Project Versions:
--node.js: 24.12.0
--Angular Framework: 21.0.0
--Angular CLI: 21.0.4
--npm: 11.7.0
--express: 5.2.1
--mysql2: 3.16.2
+
+- node.js: 24.12.0
+- Angular Framework: 21.0.0
+- Angular CLI: 21.0.4
+- npm: 11.7.0
+- express: 5.2.1
+- mysql2: 3.16.2
